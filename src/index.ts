@@ -1,5 +1,5 @@
 import path from "path";
-import Twig from 'twig';
+import Twig from "twig";
 
 // Settings
 const TEMPLATE_FOLDER = path.resolve(__dirname, "..", "templates");
