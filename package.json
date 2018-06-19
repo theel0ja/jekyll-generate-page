@@ -9,7 +9,7 @@
   "scripts": {
     "start": "nodemon",
     "test": "echo 'TODO: Make tests'",
-    "build": "npm run build-ts && npm run tslint && npm run eslint",
+    "build": "npm run build-ts && npm run tslint",
     "build-ts": "tsc",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
