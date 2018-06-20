@@ -64,6 +64,42 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<h1 id="jekyll-generate-page">Jekyll generate page</h1>
+				<p>Generate a Jekyll page.</p>
+				<h2 id="links">Links</h2>
+				<ul>
+					<li><a href="https://www.npmjs.com/package/jekyll-generate-page">NPM package</a></li>
+					<li><a href="https://theel0ja.info/jekyll-generate-page/">Documentation</a></li>
+				</ul>
+				<h2 id="example">Example</h2>
+				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">"jekyll-generate-page"</span>;
+
+<span class="hljs-comment">/**
+ * HTML (or markdown)
+ */</span>
+<span class="hljs-keyword">const</span> html = <span class="hljs-string">`
+&lt;h1&gt;About us&lt;/h1&gt;
+&lt;p&gt;Deserunt in et enim exercitation est voluptate est fugiat dolore amet sit amet.&lt;/p&gt;
+`</span>;
+
+<span class="hljs-comment">/**
+ * Render
+ */</span>
+render(<span class="hljs-string">"default"</span>, {
+  jekyll: {
+    layout: <span class="hljs-string">"page"</span>,
+    permalink: <span class="hljs-string">"/about/"</span>,
+    title: <span class="hljs-string">"About us"</span>,
+  },
+  html,
+})
+  .then(<span class="hljs-function">(<span class="hljs-params">output</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(output);
+  })
+  .catch(<span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.error(err);
+  });
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
